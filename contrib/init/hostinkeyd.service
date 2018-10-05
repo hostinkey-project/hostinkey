@@ -1,0 +1,26 @@
+[Unit]
+Description=Hostinkey's distributed currency daemon
+After=network.target
+
+[Service]
+User=hostinkey
+Group=hostinkey
+
+Type=forking
+PIDFile=/var/lib/hostinkeyd/hostinkeyd.pid
+
+ExecStart=/usr/bin/hostinkeyd -daemon -pid=/var/lib/hostinkeyd/hostinkeyd.pid \
+          -conf=/etc/hostinkey/hostinkey.conf -datadir=/var/lib/hostinkeyd
+
+ExecStop=-/usr/bin/hostinkey-cli -conf=/etc/hostinkey/hostinkey.conf \
+         -datadir=/var/lib/hostinkeyd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

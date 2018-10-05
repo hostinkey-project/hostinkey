@@ -1,0 +1,6 @@
+usr/local/bin/hostinkey-qt usr/bin
+share/pixmaps/bitcoin32.xpm usr/share/pixmaps
+share/pixmaps/bitcoin16.xpm usr/share/pixmaps
+share/pixmaps/bitcoin128.png usr/share/pixmaps
+debian/hostinkey-qt.desktop usr/share/applications
+debian/hostinkey-qt.protocol usr/share/kde4/services/

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Hostinkey
+Comment=Hostinkey P2P Cryptocurrency
+Comment[fr]=Hostinkey, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Hostinkey, eşten eşe kriptografik sanal para birimi
+Exec=hostinkey-qt %u
+Terminal=false
+Type=Application
+Icon=hostinkey128
+MimeType=x-scheme-handler/hostinkey;
+Categories=Office;Finance;
