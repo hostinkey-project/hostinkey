@@ -397,13 +397,13 @@ BOOST_AUTO_TEST_CASE(merkle_block_4)
         BOOST_CHECK(vMatched[i] == merkleBlock.vMatchedTxn[i].second);
 
     // Also match the 4th transaction
-    filter.insert(uint256("0x02981fa052f0481dbc5868f4fc2166035a10f27a03cfd2de67326471df5bc041"));
+    filter.insert(uint256("0x02981fa052f0481dbc15868f4fc2166035a10f27a03cfd2de67326471df5bc041"));
     merkleBlock = CMerkleBlock(block, filter);
     BOOST_CHECK(merkleBlock.header.GetHash() == block.GetHash());
 
     BOOST_CHECK(merkleBlock.vMatchedTxn.size() == 2);
 
-    BOOST_CHECK(merkleBlock.vMatchedTxn[0].second == uint256("0x02981fa052f0481dbc5868f4fc2166035a10f27a03cfd2de67326471df5bc041"));
+    BOOST_CHECK(merkleBlock.vMatchedTxn[0].second == uint256("0x02981fa052f0481dbc15868f4fc2166035a10f27a03cfd2de67326471df5bc041"));
     BOOST_CHECK(merkleBlock.vMatchedTxn[0].first == 3);
 
     BOOST_CHECK(merkleBlock.vMatchedTxn[1] == pair);
@@ -434,7 +434,7 @@ BOOST_AUTO_TEST_CASE(merkle_block_4_test_p2pubkey_only)
     // We should match the generation outpoint
     BOOST_CHECK(filter.contains(COutPoint(uint256("0x147caa76786596590baa4e98f5d9f48b86c7765e489f7a6ff3360fe5c674360b"), 0)));
     // ... but not the 4th transaction's output (its not pay-2-pubkey)
-    BOOST_CHECK(!filter.contains(COutPoint(uint256("0x02981fa052f0481dbc5868f4fc2166035a10f27a03cfd2de67326471df5bc041"), 0)));
+    BOOST_CHECK(!filter.contains(COutPoint(uint256("0x02981fa052f0481dbc15868f4fc2166035a10f27a03cfd2de67326471df5bc041"), 0)));
 }
 
 BOOST_AUTO_TEST_CASE(merkle_block_4_test_update_none)
@@ -456,7 +456,7 @@ BOOST_AUTO_TEST_CASE(merkle_block_4_test_update_none)
 
     // We shouldn't match any outpoints (UPDATE_NONE)
     BOOST_CHECK(!filter.contains(COutPoint(uint256("0x147caa76786596590baa4e98f5d9f48b86c7765e489f7a6ff3360fe5c674360b"), 0)));
-    BOOST_CHECK(!filter.contains(COutPoint(uint256("0x02981fa052f0481dbc5868f4fc2166035a10f27a03cfd2de67326471df5bc041"), 0)));
+    BOOST_CHECK(!filter.contains(COutPoint(uint256("0x02981fa052f0481dbc15868f4fc2166035a10f27a03cfd2de67326471df5bc041"), 0)));
 }
 
 BOOST_AUTO_TEST_SUITE_END()
