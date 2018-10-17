@@ -93,7 +93,7 @@ static void InitMessage(const std::string& message)
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("hostinkey-network-v1", psz).toStdString();
+    return QCoreApplication::translate("hostinkey-network-v1.1", psz).toStdString();
 }
 
 static QString GetLangTerritory()

@@ -13,7 +13,7 @@
  * for both hostinkeyd and hostinkey-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Hostinkey [XHK] v1");
+const std::string CLIENT_NAME("Hostinkey [XHK] v1.1");
 
 /**
  * Client version number

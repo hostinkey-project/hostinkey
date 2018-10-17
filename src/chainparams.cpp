@@ -105,7 +105,7 @@ public:
         pchMessageStart[2] = 0x44;
         pchMessageStart[3] = 0x95;
         vAlertPubKey = ParseHex("04275fbc72491ef31d0a542a2a7ff57886d5e6e9a87c821c3eb9d1b408a4ba40e996bedb258b98c53c870b1575c02fc19e43f91cda08c6956bb6574b50e332ccec");
-        nDefaultPort = 15868;
+        nDefaultPort = 5910;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Hostinkey starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
@@ -120,7 +120,7 @@ public:
         nMaxMoneyOut = 100000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 409000;
+        nLastPOWBlock = 500;
         nModifierUpdateBlock = 615800;
         nZerocoinStartHeight = 1000000;
         nAccumulatorStartHeight = 1;
@@ -131,7 +131,7 @@ public:
         nBlockLastGoodCheckpoint = 1000000; //Last valid accumulator checkpoint
         
         
-        const char* pszTimestamp = "1st October 2018 - HOSTINKEY - The day it all just started.";
+        const char* pszTimestamp = "1st October 2018 - HOSTINKEY - The day it all just started First.";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -144,11 +144,11 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1538505656;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 2463914;
-
+        genesis.nNonce = 188574;
+   
 	    hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000d8fce539b351666453c8e80f147969fb30db588a7740c4564aa596c0471"));
-        assert(genesis.hashMerkleRoot == uint256("0x663202dacfbe5ded1b8c3553add6bf52db170ba17338518d907bd6379af69456"));
+        assert(hashGenesisBlock == uint256("0x000005d4d09f81adedebcc4282e3e3057d5cbc3539886ead163b9e401ac57e56"));
+        assert(genesis.hashMerkleRoot == uint256("0x71e12f2e21ace239c00a937ea29523e2bca363c75c95325fab37595bfa229112"));
 		
 		vSeeds.push_back(CDNSSeedData("wallet.hostinkey.com", "wallet.hostinkey.com"));   // Primary DNS Seeder
 		vSeeds.push_back(CDNSSeedData("hostinkey.blockchain-explorers.info", "hostinkey.blockchain-explorers.info"));  // Primary DNS Seeder
@@ -177,7 +177,7 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "04b5793caecda7fa60ad384eef39d5825708fe960ad8b31ad0293c0859f9548aa8ca2b556c1bdb04c683d1a1d1fe57d3774f8fd7867f8aecb7e354cb6b008230c9";
+        strSporkKey = "04275fbc72491ef31d0a542a2a7ff57886d5e6e9a87c821c3eb9d1b408a4ba40e996bedb258b98c53c870b1575c02fc19e43f91cda08c6956bb6574b50e332ccec";
         strObfuscationPoolDummyAddress = "7Djk6ufsEvdXt5ckKBnrRQcH5LiSVnudE5";
         nStartMasternodePayments = 1403728576; //Wed, 25 Jun 2014 20:36:16 GMT
 

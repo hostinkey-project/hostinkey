@@ -4304,7 +4304,7 @@ Please be patient...</source>
     </message>
 </context>
 <context>
-    <name>hostinkey-network-v1</name>
+    <name>hostinkey-network-v1.1</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = tx 메타 데이터 유지 예 : 계정 소유자 및 지불 요청 정보, 2 = tx 메타 데이터 삭제)</translation>
@@ -4578,8 +4578,8 @@ rpcpassword=%s
         <translation>환경설정에서 masternodeprivkey를 지정해야 합니다. 도움말을 참조하십시오.</translation>
     </message>
     <message>
-        <source>(15868 could be used only on mainnet)</source>
-        <translation>(15868 은 메인넷에서만 사용될 수 있습니다)</translation>
+        <source>(5910 could be used only on mainnet)</source>
+        <translation>(5910 은 메인넷에서만 사용될 수 있습니다)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4590,8 +4590,8 @@ rpcpassword=%s
         <translation>(기본값: 1)</translation>
     </message>
     <message>
-        <source>(must be 15868 for mainnet)</source>
-        <translation>(메인넷 일경우 15868)</translation>
+        <source>(must be 5910 for mainnet)</source>
+        <translation>(메인넷 일경우 5910)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

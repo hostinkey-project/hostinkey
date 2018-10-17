@@ -2034,7 +2034,7 @@ https://www.transifex.com/hostinkey-project/hostinkey-project-translations </tra
     </message>
     </context>
 <context>
-    <name>hostinkey-network-v1</name>
+    <name>hostinkey-network-v1.1</name>
     <message>
         <source>Error</source>
         <translation>Błąd</translation>

@@ -3768,7 +3768,7 @@ https://www.transifex.com/hostinkey-project/hostinkey-project-translations</tran
     </message>
     </context>
 <context>
-    <name>hostinkey-network-v1</name>
+    <name>hostinkey-network-v1.1</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = beholdtx metadata. For eksempel information om kontoejer og betalngsanmodninger, 2 = drop TX metadata)</translation>
@@ -4039,8 +4039,8 @@ For eksempel: alertnotify=Echo %% | mail - s "Hostinkey ALARM!" e-mail@administr
         <translation>Der skal angives en masternodeprivkey i konfigurationen. For mere information, se i dokumentationen.</translation>
     </message>
     <message>
-        <source>(15868 could be used only on mainnet)</source>
-        <translation>(15868 kunne kun bruges på hovednettet)</translation>
+        <source>(5910 could be used only on mainnet)</source>
+        <translation>(5910 kunne kun bruges på hovednettet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4051,8 +4051,8 @@ For eksempel: alertnotify=Echo %% | mail - s "Hostinkey ALARM!" e-mail@administr
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 15868 for mainnet)</source>
-        <translation>(skal være 15868 for hovednettet)</translation>
+        <source>(must be 5910 for mainnet)</source>
+        <translation>(skal være 5910 for hovednettet)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

@@ -3884,7 +3884,7 @@ https://www.transifex.com/hostinkey-project/hostinkey-project-translations</tran
     </message>
 </context>
 <context>
-    <name>hostinkey-network-v1</name>
+    <name>hostinkey-network-v1.1</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</translation>
@@ -4166,8 +4166,8 @@ for example: alertnotify=echo %%s | mail -s "Hostinkey Alert" admin@foo.com
         <translation>You must specify a masternodeprivkey in the configuration. Please see documentation for help.</translation>
     </message>
     <message>
-        <source>(15868 could be used only on mainnet)</source>
-        <translation>(15868 could be used only on mainnet)</translation>
+        <source>(5910 could be used only on mainnet)</source>
+        <translation>(5910 could be used only on mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4178,8 +4178,8 @@ for example: alertnotify=echo %%s | mail -s "Hostinkey Alert" admin@foo.com
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 15868 for mainnet)</source>
-        <translation>(must be 15868 for mainnet)</translation>
+        <source>(must be 5910 for mainnet)</source>
+        <translation>(must be 5910 for mainnet)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

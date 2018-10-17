@@ -4282,7 +4282,7 @@ Wees alsjeblieft geduldig...</translation>
     </message>
 </context>
 <context>
-    <name>hostinkey-network-v1</name>
+    <name>hostinkey-network-v1.1</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = houd tx meta data, bijvoorbeeld account eigenaar en betalingsverzoek informatie, 2 = drop tx meta data)</translation>
@@ -4560,8 +4560,8 @@ bijvoorbeeld: alertnotify = echo %%s | mail -s "Hostinkey Alert" admin@foo.com
         <translation>Je moet een masternodeprivkey opgeven in de configuratie. Raadpleeg de documentatie voor hulp.</translation>
     </message>
     <message>
-        <source>(15868 could be used only on mainnet)</source>
-        <translation>(15868 kan alleen op mainnet worden gebruikt)</translation>
+        <source>(5910 could be used only on mainnet)</source>
+        <translation>(5910 kan alleen op mainnet worden gebruikt)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4572,8 +4572,8 @@ bijvoorbeeld: alertnotify = echo %%s | mail -s "Hostinkey Alert" admin@foo.com
         <translation>(standaard: 1)</translation>
     </message>
     <message>
-        <source>(must be 15868 for mainnet)</source>
-        <translation>(moet 15868 voor mainnet zijn)</translation>
+        <source>(must be 5910 for mainnet)</source>
+        <translation>(moet 5910 voor mainnet zijn)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

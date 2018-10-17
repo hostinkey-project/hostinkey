@@ -5698,7 +5698,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
 </context>
 <context>
-    <name>hostinkey-network-v1</name>
+    <name>hostinkey-network-v1.1</name>
     <message>
         <location filename="../hostinkeystrings.cpp" line="+15"/>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
@@ -6031,8 +6031,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Hostinkey Alert&quot; admin@fo
     </message>
     <message>
         <location line="+3"/>
-        <source>(15868 could be used only on mainnet)</source>
-        <translation type="unfinished">(15868 could be used only on mainnet)</translation>
+        <source>(5910 could be used only on mainnet)</source>
+        <translation type="unfinished">(5910 could be used only on mainnet)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6046,7 +6046,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Hostinkey Alert&quot; admin@fo
     </message>
     <message>
         <location line="+1"/>
-        <source>(must be 15868 for mainnet)</source>
+        <source>(must be 5910 for mainnet)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

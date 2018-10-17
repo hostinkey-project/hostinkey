@@ -687,7 +687,7 @@
     </message>
     <message>
         <source>Show the Hostinkey Core help message to get a list with possible Hostinkey command-line options</source>
-        <translation>Zeige die Hostinkey-network-v1 Hilfe, um mögliche Hostinkey Kommando-Zeilen-Optionen anzuzeigen</translation>
+        <translation>Zeige die Hostinkey-network-v1.1 Hilfe, um mögliche Hostinkey Kommando-Zeilen-Optionen anzuzeigen</translation>
     </message>
     <message>
         <source>Hostinkey Core client</source>
@@ -4293,7 +4293,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
 </context>
 <context>
-    <name>hostinkey-network-v1</name>
+    <name>hostinkey-network-v1.1</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = behalte Tx-Meta-Daten z.B. Betrag, Besitzer und Zahlungsanforderungsinformationen, 2 = verwerfe Tx-Meta-Daten)</translation>
@@ -4527,8 +4527,8 @@ Beispiel: alertnotify=echo %%s | mail -s "Hostinkey Alert" admin@foo.com
         <translation>Sie müssen einen privaten Masternode-Schlüssel in der Konfiguration festlegen. Bitte nutzen Sie die Dokumentation zwecks Hilfe.</translation>
     </message>
     <message>
-        <source>(15868 could be used only on mainnet)</source>
-        <translation>(15868 kann nur im Mainnet verwendet werden)</translation>
+        <source>(5910 could be used only on mainnet)</source>
+        <translation>(5910 kann nur im Mainnet verwendet werden)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4539,8 +4539,8 @@ Beispiel: alertnotify=echo %%s | mail -s "Hostinkey Alert" admin@foo.com
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 15868 for mainnet)</source>
-        <translation>(muss im Mainnet 15868 sein)</translation>
+        <source>(must be 5910 for mainnet)</source>
+        <translation>(muss im Mainnet 5910 sein)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
