@@ -3490,8 +3490,8 @@ https://www.transifex.com/hostinkey-project/hostinkey-project-translations</tran
         <translation>Você deve especificar uma masternodeprivkey na configuração. Favor verificar o manual para obter ajuda.</translation>
     </message>
     <message>
-        <source>(5910 could be used only on mainnet)</source>
-        <translation>(5910 could be used only on mainnet)</translation>
+        <source>(3310 could be used only on mainnet)</source>
+        <translation>(3310 could be used only on mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -3502,8 +3502,8 @@ https://www.transifex.com/hostinkey-project/hostinkey-project-translations</tran
         <translation>(padrão: 1)</translation>
     </message>
     <message>
-        <source>(must be 5910 for mainnet)</source>
-        <translation>(deve ser 5910 para mainnet)</translation>
+        <source>(must be 3310 for mainnet)</source>
+        <translation>(deve ser 3310 para mainnet)</translation>
     </message>
     <message>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>

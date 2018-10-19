@@ -105,33 +105,33 @@ public:
         pchMessageStart[2] = 0x44;
         pchMessageStart[3] = 0x95;
         vAlertPubKey = ParseHex("04275fbc72491ef31d0a542a2a7ff57886d5e6e9a87c821c3eb9d1b408a4ba40e996bedb258b98c53c870b1575c02fc19e43f91cda08c6956bb6574b50e332ccec");
-        nDefaultPort = 5910;
-        bnProofOfWorkLimit = ~uint256(0) >> 20; // Hostinkey starting difficulty is 1 / 2^12
+        nDefaultPort = 3310;
+       bnProofOfWorkLimit = ~uint256(0) >> 20;
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Hostinkey: 1 day
-        nTargetSpacing = 1 * 60;  // Hostinkey: 1 minute
+        nTargetTimespan = 1 * 60; 
+        nTargetSpacing = 1 * 60;  
         nMaturity = 29;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 100000000 * COIN;
+        nMaxMoneyOut = 20000000 * COIN;
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 500;
-        nModifierUpdateBlock = 615800;
-        nZerocoinStartHeight = 1000000;
+        nModifierUpdateBlock = 999999999;
+        nZerocoinStartHeight = 501;
         nAccumulatorStartHeight = 1;
         nZerocoinStartTime = 1518397608; // 
-        nBlockEnforceSerialRange = 1000000; //Enforce serial range starting this block
-        nBlockRecalculateAccumulators = 1000000; //Trigger a recalculation of accumulators
-        nBlockFirstFraudulent = 1000000; //First block that bad serials emerged
-        nBlockLastGoodCheckpoint = 1000000; //Last valid accumulator checkpoint
+        nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
+        nBlockRecalculateAccumulators = ~1; //Trigger a recalculation of accumulators
+        nBlockFirstFraudulent = ~1; //First block that bad serials emerged
+        nBlockLastGoodCheckpoint = ~1; //Last valid accumulator checkpoint
         
         
-        const char* pszTimestamp = "1st October 2018 - HOSTINKEY - The day it all just started First.";
+        const char* pszTimestamp = "1st October 2018 - HOSTINKEY - The day it started First.";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -142,13 +142,13 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1538505656;
+        genesis.nTime = 1539862464;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 188574;
-   
+        genesis.nNonce = 267836;
+  
 	    hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000005d4d09f81adedebcc4282e3e3057d5cbc3539886ead163b9e401ac57e56"));
-        assert(genesis.hashMerkleRoot == uint256("0x71e12f2e21ace239c00a937ea29523e2bca363c75c95325fab37595bfa229112"));
+        assert(hashGenesisBlock == uint256("0x000003d0dcd2a2f9dd247f0868748b3ed6772c65adebe70ebea7af2fb2e65853"));
+        assert(genesis.hashMerkleRoot == uint256("0x9a9aeaa1f21862ee06f3f554d808161de0ed416ded2fde8bc716f0294ad2ca7e"));
 		
 		vSeeds.push_back(CDNSSeedData("wallet.hostinkey.com", "wallet.hostinkey.com"));   // Primary DNS Seeder
 		vSeeds.push_back(CDNSSeedData("hostinkey.blockchain-explorers.info", "hostinkey.blockchain-explorers.info"));  // Primary DNS Seeder
@@ -189,7 +189,7 @@ public:
         nRequiredAccumulation = 1;
         nDefaultSecurityLevel = 100; //full security level for accumulators
         nZerocoinHeaderVersion = 4; //Block headers must be this version once zerocoin is active
-        nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
+        nBudget_Fee_Confirmations = 1; // Number of confirmations for the finalization fee
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const

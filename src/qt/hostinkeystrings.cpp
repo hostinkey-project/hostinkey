@@ -226,10 +226,10 @@ QT_TRANSLATE_NOOP("hostinkey-network-v1.1", ""
 QT_TRANSLATE_NOOP("hostinkey-network-v1.1", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("hostinkey-network-v1.1", "(5910 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("hostinkey-network-v1.1", "(3310 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("hostinkey-network-v1.1", "(default: %s)"),
 QT_TRANSLATE_NOOP("hostinkey-network-v1.1", "(default: 1)"),
-QT_TRANSLATE_NOOP("hostinkey-network-v1.1", "(must be 5910 for mainnet)"),
+QT_TRANSLATE_NOOP("hostinkey-network-v1.1", "(must be 3310 for mainnet)"),
 QT_TRANSLATE_NOOP("hostinkey-network-v1.1", "<category> can be:"),
 QT_TRANSLATE_NOOP("hostinkey-network-v1.1", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("hostinkey-network-v1.1", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
