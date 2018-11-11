@@ -2131,7 +2131,7 @@ int64_t GetBlockValue(int nHeight)
 	}else if(nHeight > 0 && nHeight <= 20000) {
         nSubsidy = 100 * COIN;
 	}else if(nHeight > 20000 && nHeight <= 86400) {
-        nSubsidy = 200 * COIN;	
+        nSubsidy = 100 * COIN;
 	} else if (nHeight > 86400 && nHeight <= 151200) {
 		nSubsidy = 150 * COIN;
 	} else if (nHeight > 151200 && nHeight <= 302400) {
@@ -2153,6 +2153,10 @@ int64_t GetBlockValue(int nHeight)
 	} else if (nHeight > 624960) {
 		nSubsidy = 5 * COIN;
 	}
+
+    if (fDebug) {
+        LogPrintf("%s %s: nSubsidy=%s\n", __FILE__, __FUNCTION__, FormatMoney(nSubsidy));
+    }
 	
 	return nSubsidy;
 }
