@@ -1419,7 +1419,7 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>hostinkey-network-v1.1</name>
+    <name>hostinkey-network-v2</name>
     <message>
         <source>Error</source>
         <translation>Fel</translation>

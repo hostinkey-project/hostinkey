@@ -5698,7 +5698,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
 </context>
 <context>
-    <name>hostinkey-network-v1.1</name>
+    <name>hostinkey-network-v2</name>
     <message>
         <location filename="../hostinkeystrings.cpp" line="+15"/>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>

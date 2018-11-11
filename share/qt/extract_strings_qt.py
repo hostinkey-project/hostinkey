@@ -78,6 +78,6 @@ f.write('static const char UNUSED *hostinkey_strings[] = {\n')
 messages.sort(key=operator.itemgetter(0))
 for (msgid, msgstr) in messages:
     if msgid != EMPTY:
-        f.write('QT_TRANSLATE_NOOP("hostinkey-network-v1.1", %s),\n' % ('\n'.join(msgid)))
+        f.write('QT_TRANSLATE_NOOP("hostinkey-network-v2", %s),\n' % ('\n'.join(msgid)))
 f.write('};\n')
 f.close()

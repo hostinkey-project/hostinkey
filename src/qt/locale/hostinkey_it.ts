@@ -1314,7 +1314,7 @@ MultiSend: %1</translation>
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>hostinkey-network-v1.1</name>
+    <name>hostinkey-network-v2</name>
     <message>
         <source>Error</source>
         <translation>Errore</translation>

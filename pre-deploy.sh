@@ -25,7 +25,7 @@ elif [[ $HOST = "x86_64-apple-darwin11" ]]; then
 fi
 
 if [[ $HOST = "x86_64-apple-darwin11" ]]; then
-    find $TRAVIS_BUILD_DIR -type f | grep -i Hostinkey-network-v1.1.dmg$ | xargs -i cp {} $OUTDIR/bin
+    find $TRAVIS_BUILD_DIR -type f | grep -i Hostinkey-network-v2.dmg$ | xargs -i cp {} $OUTDIR/bin
 else
     cp $TRAVIS_BUILD_DIR/src/qt/hostinkey-qt $OUTDIR/bin/ || cp $TRAVIS_BUILD_DIR/src/qt/hostinkey-qt.exe $OUTDIR/bin/ || echo "no QT Wallet"
     cp $TRAVIS_BUILD_DIR/src/hostinkeyd $OUTDIR/bin/ || cp $TRAVIS_BUILD_DIR/src/hostinkeyd.exe $OUTDIR/bin/
