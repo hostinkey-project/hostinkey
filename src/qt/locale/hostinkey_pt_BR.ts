@@ -3408,7 +3408,7 @@ https://www.transifex.com/hostinkey-project/hostinkey-project-translations</tran
     </message>
     </context>
 <context>
-    <name>hostinkey-network-v1.1</name>
+    <name>hostinkey-network-v2</name>
     <message>
         <source>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</source>
         <translation>Deletar todas as transações da carteira e somente recuperar aquelas partes da blockchain através de -rescan na inicialização</translation>

@@ -2376,7 +2376,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     </message>
     </context>
 <context>
-    <name>hostinkey-network-v1.1</name>
+    <name>hostinkey-network-v2</name>
     <message>
         <source>Error</source>
         <translation>Chyba</translation>
