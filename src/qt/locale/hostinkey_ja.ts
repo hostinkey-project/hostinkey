@@ -266,6 +266,6 @@
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>hostinkey-network-v2</name>
+    <name>hostinkey-network-v3</name>
     </context>
 </TS>

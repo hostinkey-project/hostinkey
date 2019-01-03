@@ -1625,13 +1625,13 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 if (nCoinType == ONLY_DENOMINATED) {
                     found = IsDenominatedAmount(pcoin->vout[i].nValue);
                 } else if (nCoinType == ONLY_NOT10000IFMN) {
-                    found = !(fMasterNode && pcoin->vout[i].nValue == 10000 * COIN);
+                    found = !(fMasterNode && pcoin->vout[i].nValue == GetMstrNodCollateral(chainActive.Height())*COIN);
                 } else if (nCoinType == ONLY_NONDENOMINATED_NOT10000IFMN) {
                     if (IsCollateralAmount(pcoin->vout[i].nValue)) continue; // do not use collateral amounts
                     found = !IsDenominatedAmount(pcoin->vout[i].nValue);
-                    if (found && fMasterNode) found = pcoin->vout[i].nValue != 10000 * COIN; // do not use Hot MN funds
+                    if (found && fMasterNode) found = pcoin->vout[i].nValue != GetMstrNodCollateral(chainActive.Height())*COIN; // do not use Hot MN funds
                 } else if (nCoinType == ONLY_10000) {
-                    found = pcoin->vout[i].nValue == 10000 * COIN;
+                    if (found && fMasterNode) found = pcoin->vout[i].nValue != GetMstrNodCollateral(chainActive.Height())*COIN; // do not use Hot MN funds
                 } else {
                     found = true;
                 }
@@ -2031,7 +2031,7 @@ bool CWallet::SelectCoinsByDenominations(int nDenom, CAmount nValueMin, CAmount 
                 //Denomination criterion has been met, we can take any matching denominations
                 if ((nDenom & (1 << 0)) && out.tx->vout[out.i].nValue == ((10000 * COIN) + 10000000)) {
                     fAccepted = true;
-                } else if ((nDenom & (1 << 1)) && out.tx->vout[out.i].nValue == ((1000 * COIN) + 1000000)) {
+                } else if ((nDenom & (1 << 1)) && out.tx->vout[out.i].nValue == ((GetMstrNodCollateral(chainActive.Height())*COIN) + 1000000)) {
                     fAccepted = true;
                 } else if ((nDenom & (1 << 2)) && out.tx->vout[out.i].nValue == ((100 * COIN) + 100000)) {
                     fAccepted = true;
@@ -2047,7 +2047,7 @@ bool CWallet::SelectCoinsByDenominations(int nDenom, CAmount nValueMin, CAmount 
                 if ((nDenom & (1 << 0)) && out.tx->vout[out.i].nValue == ((10000 * COIN) + 10000000)) {
                     fAccepted = true;
                     fFound10000 = true;
-                } else if ((nDenom & (1 << 1)) && out.tx->vout[out.i].nValue == ((1000 * COIN) + 1000000)) {
+                } else if ((nDenom & (1 << 1)) && out.tx->vout[out.i].nValue == ((GetMstrNodCollateral(chainActive.Height())*COIN) + 1000000)) {
                     fAccepted = true;
                     fFound1000 = true;
                 } else if ((nDenom & (1 << 2)) && out.tx->vout[out.i].nValue == ((100 * COIN) + 100000)) {
@@ -2842,7 +2842,7 @@ string CWallet::PrepareObfuscationDenominate(int minRounds, int maxRounds)
             bool fAccepted = false;
             if ((obfuScationPool.sessionDenom & (1 << 0)) && v == ((10000 * COIN) + 10000000)) {
                 fAccepted = true;
-            } else if ((obfuScationPool.sessionDenom & (1 << 1)) && v == ((1000 * COIN) + 1000000)) {
+            } else if ((obfuScationPool.sessionDenom & (1 << 1)) && v == ((GetMstrNodCollateral(chainActive.Height())*COIN) + 1000000)) {
                 fAccepted = true;
             } else if ((obfuScationPool.sessionDenom & (1 << 2)) && v == ((100 * COIN) + 100000)) {
                 fAccepted = true;

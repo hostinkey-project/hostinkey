@@ -790,7 +790,7 @@
     </message>
     </context>
 <context>
-    <name>hostinkey-network-v2</name>
+    <name>hostinkey-network-v3</name>
     <message>
         <source>Error</source>
         <translation>Greška</translation>

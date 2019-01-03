@@ -1808,7 +1808,7 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     </message>
     </context>
 <context>
-    <name>hostinkey-network-v2</name>
+    <name>hostinkey-network-v3</name>
     <message>
         <source>Error</source>
         <translation>Erreur</translation>

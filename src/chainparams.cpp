@@ -100,12 +100,12 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x33;
-        pchMessageStart[1] = 0x64;
-        pchMessageStart[2] = 0x44;
-        pchMessageStart[3] = 0x95;
-        vAlertPubKey = ParseHex("04275fbc72491ef31d0a542a2a7ff57886d5e6e9a87c821c3eb9d1b408a4ba40e996bedb258b98c53c870b1575c02fc19e43f91cda08c6956bb6574b50e332ccec");
-        nDefaultPort = 3310;
+        pchMessageStart[0] = 0x07;
+        pchMessageStart[1] = 0x17;
+        pchMessageStart[2] = 0x87;
+        pchMessageStart[3] = 0x97;
+        vAlertPubKey = ParseHex("04b67a3fabf524788ab65e79a474f10d7dad3c34850d4b69e6c773c779ecc1c1f5b12066da5ff98d1d4a231cafa2020d4bd41fec8bf336da3fc7a8bc318374633a");
+        nDefaultPort = 7777;
        bnProofOfWorkLimit = ~uint256(0) >> 20;
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
@@ -115,14 +115,14 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; 
         nTargetSpacing = 1 * 60;  
-        nMaturity = 29;
+        nMaturity = 26;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 20000000 * COIN;
+        nMaxMoneyOut = 42000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 500;
+        nLastPOWBlock = 200;
         nModifierUpdateBlock = 999999999;
-        nZerocoinStartHeight = 501;
+        nZerocoinStartHeight = 201;
         nAccumulatorStartHeight = 1;
         nZerocoinStartTime = 1518397608; // 
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
@@ -131,37 +131,38 @@ public:
         nBlockLastGoodCheckpoint = ~1; //Last valid accumulator checkpoint
         
         
-        const char* pszTimestamp = "1st October 2018 - HOSTINKEY - The day it started First.";
+        const char* pszTimestamp = "03rd January 2019 - HOSTINKEY - v3 Revotron Has Launched.";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 0 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("048e3e3be93a7a70bad46c50f1b42da742eb2416810cc10cd8dbc7a84542c09a0aaff5f24b85eef38bc990f615d0028edb9c14b55de3d12fd5238039ec8c3b6641") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("0468b8afb7db9e79f1e9b65568b14f0531e6ac18124749aa23c980f7e6e539d3eb78d716eb7535d197e3470253af90e419dd185d480cea9f3754359452c4d8520b") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1539862464;
+        genesis.nTime = 1546472238;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 267836;
-  
+        genesis.nNonce = 931522;
+
 	    hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000003d0dcd2a2f9dd247f0868748b3ed6772c65adebe70ebea7af2fb2e65853"));
-        assert(genesis.hashMerkleRoot == uint256("0x9a9aeaa1f21862ee06f3f554d808161de0ed416ded2fde8bc716f0294ad2ca7e"));
+        assert(hashGenesisBlock == uint256("0x0000017b188eb21427287f6e42bb5cd03f2a98c17794cd9487f831791924d0f8"));
+        assert(genesis.hashMerkleRoot == uint256("0xffb8d516e95fb1ce3aa08833f30065c220b9388751d2f04447cb082c257f42f9"));
 		
-		vSeeds.push_back(CDNSSeedData("wallet.hostinkey.com", "wallet.hostinkey.com"));   // Primary DNS Seeder
+		vSeeds.push_back(CDNSSeedData("45.76.167.124", "45.76.167.124"));   // Primary DNS Seeder
 		vSeeds.push_back(CDNSSeedData("hostinkey.blockchain-explorers.info", "hostinkey.blockchain-explorers.info"));  // Primary DNS Seeder
-		vSeeds.push_back(CDNSSeedData("45.76.167.124", "45.76.167.124"));         
-	 	vSeeds.push_back(CDNSSeedData("140.82.1.238", "140.82.1.238"));  
-		vSeeds.push_back(CDNSSeedData("149.28.42.21", "149.28.42.21"));  
+		vSeeds.push_back(CDNSSeedData("140.82.1.238", "140.82.1.238"));         
+	 	vSeeds.push_back(CDNSSeedData("149.28.42.21", "149.28.42.21"));  
 		vSeeds.push_back(CDNSSeedData("108.61.73.134", "108.61.73.134"));  
+		vSeeds.push_back(CDNSSeedData("140.82.8.212", "140.82.8.212"));  
+		vSeeds.push_back(CDNSSeedData("63.209.35.136", "63.209.35.136"));
+		
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 40);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 8);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 212);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x31)(0x2B).convert_to_container<std::vector<unsigned char> >();
-        // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0xbc).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
@@ -177,8 +178,8 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "04275fbc72491ef31d0a542a2a7ff57886d5e6e9a87c821c3eb9d1b408a4ba40e996bedb258b98c53c870b1575c02fc19e43f91cda08c6956bb6574b50e332ccec";
-        strObfuscationPoolDummyAddress = "7Djk6ufsEvdXt5ckKBnrRQcH5LiSVnudE5";
+        strSporkKey = "04b67a3fabf524788ab65e79a474f10d7dad3c34850d4b69e6c773c779ecc1c1f5b12066da5ff98d1d4a231cafa2020d4bd41fec8bf336da3fc7a8bc318374633a";
+        strObfuscationPoolDummyAddress = "HF5mSbqK5TengC7C7bHUh3883kq7F5RmWv";
         nStartMasternodePayments = 1403728576; //Wed, 25 Jun 2014 20:36:16 GMT
 
         /** Zerocoin */
@@ -213,7 +214,7 @@ public:
         pchMessageStart[1] = 0xba;
         pchMessageStart[2] = 0x1b;
         pchMessageStart[3] = 0x54;
-        vAlertPubKey = ParseHex("04a11dcd8586111b335034b93157a1c85efbab0848ec05e786c0df8f6ea827126d5d706a0d9a99b81bb98c6973ec15976de7d8195483b9145747a901e1ff0e5c5a");
+        vAlertPubKey = ParseHex("0468b8afb7db9e79f1e9b65568b14f0531e6ac18124749aa23c980f7e6e539d3eb78d716eb7535d197e3470253af90e419dd185d480cea9f3754359452c4d8520b");
         nDefaultPort = 51434;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;

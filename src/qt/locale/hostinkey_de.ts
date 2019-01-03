@@ -687,7 +687,7 @@
     </message>
     <message>
         <source>Show the Hostinkey Core help message to get a list with possible Hostinkey command-line options</source>
-        <translation>Zeige die Hostinkey-network-v2 Hilfe, um mögliche Hostinkey Kommando-Zeilen-Optionen anzuzeigen</translation>
+        <translation>Zeige die Hostinkey-network-v3 Hilfe, um mögliche Hostinkey Kommando-Zeilen-Optionen anzuzeigen</translation>
     </message>
     <message>
         <source>Hostinkey Core client</source>
@@ -4293,7 +4293,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
 </context>
 <context>
-    <name>hostinkey-network-v2</name>
+    <name>hostinkey-network-v3</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = behalte Tx-Meta-Daten z.B. Betrag, Besitzer und Zahlungsanforderungsinformationen, 2 = verwerfe Tx-Meta-Daten)</translation>

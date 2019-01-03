@@ -3884,7 +3884,7 @@ https://www.transifex.com/hostinkey-project/hostinkey-project-translations</tran
     </message>
 </context>
 <context>
-    <name>hostinkey-network-v2</name>
+    <name>hostinkey-network-v3</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</translation>
